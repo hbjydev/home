@@ -9,7 +9,7 @@
   xdg.configFile."nixpkgs/config.nix".source = ./nixpkgs-config.nix;
 
   # Packages that should be installed to the user profile.
-  home.packages = import ./packages.nix { inherit pkgs; };
+  home.packages = import ./packages.nix { inherit pkgs; }; 
 
   home.sessionVariables = {
     EDITOR = "nvim";
@@ -17,7 +17,7 @@
     LC_ALL = "en_GB.UTF-8";
     LC_CTYPE = "en_GB.UTF-8";
     PATH = "$PATH:$GOPATH/bin";
-    NIXPKGS_ALLOW_UNFREE = 1;
+    NIXPKGS_ALLOW_UNFREE = "1";
   };
 
   # Let Home Manager install and manage itself.

@@ -8,7 +8,7 @@ with pkgs; [
   docker
   fd
   glab
-  jetbrains.datagrip
+  #jetbrains.datagrip # TODO: resolve issue with unfree licenses
   jq
   k9s
   kubectl
