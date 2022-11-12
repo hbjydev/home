@@ -17,6 +17,7 @@ with pkgs; [
   nodejs-18_x
   #postman
   #pulumi-bin
+  python3Packages.pynvim
   python3Full
   ripgrep
   rustc

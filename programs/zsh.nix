@@ -29,10 +29,6 @@
 
     tf = "terraform";
 
-    vi = "nvim";
-    vim = "nvim";
-    e = "nvim";
-
     gs = "git status -s";
     ga = "git add";
     gc = "git commit";

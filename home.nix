@@ -1,6 +1,8 @@
-{ config, pkgs, ... }:
+{ config, pkgs, overlays, ... }:
 
 {
+  nixpkgs.overlays = overlays;
+
   home.username = "hayden";
   home.homeDirectory = "/home/hayden";
   home.stateVersion = "22.05";
@@ -17,6 +19,7 @@
   home.packages = import ./packages.nix { inherit pkgs; }; 
 
   home.file.".config/k8s/skin.yaml".source = ./config/k9s/skin.yaml;
+  home.file.".config/nvim".source = ./config/nvim/.;
 
   home.sessionVariables = {
     EDITOR = "nvim";
@@ -27,11 +30,10 @@
     NIXPKGS_ALLOW_UNFREE = "1";
   };
 
-  # Configure Git
+  # Configure programs
   programs.git = import ./programs/git.nix { inherit pkgs; };
-
-  # Configure Github CLI
   programs.gh = import ./programs/gh.nix {};
   programs.zsh = import ./programs/zsh.nix {};
   programs.kitty = import ./programs/kitty.nix {};
+  programs.neovim = import ./programs/nvim.nix { inherit pkgs; };
 }
