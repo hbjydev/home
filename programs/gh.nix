@@ -1,3 +1,4 @@
+{ ... }:
 {
   enable = true;
   enableGitCredentialHelper = true;

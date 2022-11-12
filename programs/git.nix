@@ -1,5 +1,4 @@
 { pkgs, ... }:
-
 {
   enable = true;
   userName = "Hayden Young";
