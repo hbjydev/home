@@ -1,8 +1,6 @@
-{ config, pkgs, overlays, ... }:
+{ config, pkgs, ... }:
 
 {
-  nixpkgs.overlays = overlays;
-
   home.username = "hayden";
   home.homeDirectory = "/home/hayden";
   home.stateVersion = "22.05";
@@ -19,7 +17,7 @@
   home.packages = import ./packages.nix { inherit pkgs; }; 
 
   home.file.".config/k8s/skin.yaml".source = ./config/k9s/skin.yaml;
-  home.file.".config/nvim".source = ./config/nvim/.;
+  home.file.".config/nvim/init.lua".source = ./config/nvim/init.lua;
 
   home.sessionVariables = {
     EDITOR = "nvim";

@@ -53,6 +53,9 @@
     vimPlugins.telescope-nvim
     vimPlugins.popup-nvim
     vimPlugins.telescope-symbols-nvim
+
+    # my configuration
+    customVim.hayden
   ];
 
   extraConfig = ''

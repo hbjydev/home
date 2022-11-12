@@ -1,0 +1,13 @@
+require'hayden.config.lsp'.setup()
+require'hayden.config.snip'.setup()
+
+require'hayden.config.autopairs'.setup()
+require'hayden.config.cmp'.setup()
+require'hayden.config.gitsigns'.setup()
+require'hayden.config.icons'.setup()
+require'hayden.config.indentblankline'.setup()
+require'hayden.config.lualine'.setup()
+require'hayden.config.neogit'.setup()
+require'hayden.config.nvimtree'.setup()
+require'hayden.config.telescope'.setup()
+require'hayden.config.treesitter'.setup()

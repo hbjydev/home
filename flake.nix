@@ -15,15 +15,16 @@
       system = "x86_64-linux";
       overlays = [
         inputs.neovim-nightly.overlay
+        (import ./overlays.nix)
       ];
       pkgs = inputs.nixpkgs.legacyPackages.${system};
     in {
       homeConfigurations.hayden = inputs.home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
-        modules = [ ./home.nix ];
-        extraSpecialArgs = {
-          inherit overlays;
-        };
+        modules = [
+          { nixpkgs.overlays = overlays; }
+          ./home.nix
+        ];
       };
     };
 }
