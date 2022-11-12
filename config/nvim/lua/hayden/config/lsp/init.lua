@@ -111,14 +111,14 @@ function M.on_attach(client, bufnr)
     vim.bo[bufnr].formatexpr = "v:lua.vim.lsp.formatexpr()"
   end
 
-  -- Configure key mappings
-  require("config.lsp.keymaps").setup(client, bufnr)
+  -- hayden.configure key mappings
+  require("hayden.config.lsp.keymaps").setup(client, bufnr)
 
-  -- Configure highlighting
-  require("config.lsp.highlighter").setup(client, bufnr)
+  -- hayden.configure highlighting
+  require("hayden.config.lsp.highlighter").setup(client, bufnr)
 
-  -- Configure formatting
-  -- require("config.lsp.null-ls.formatters").setup(client, bufnr)
+  -- hayden.configure formatting
+  -- require("hayden.config.lsp.null-ls.formatters").setup(client, bufnr)
 
   -- tagfunc
   if caps.definitionProvider then
@@ -156,15 +156,15 @@ local opts = {
 }
 
 -- Setup LSP handlers
-require("config.lsp.handlers").setup()
+require("hayden.config.lsp.handlers").setup()
 
 
 function M.setup()
   -- null-ls
-  -- require("config.lsp.null-ls").setup(opts)
+  -- require("hayden.config.lsp.null-ls").setup(opts)
 
   -- Installer
-  require("config.lsp.installer").setup(servers, opts)
+  require("hayden.config.lsp.installer").setup(servers, opts)
 end
 
 return M

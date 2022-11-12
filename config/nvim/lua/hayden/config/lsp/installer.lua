@@ -2,7 +2,7 @@ local M = {}
 
 function M.setup(servers, server_options)
   local lspconfig = require "lspconfig"
-  local icons = require "config.icons"
+  local icons = require "hayden.config.icons"
 
   require("mason").setup {
     ui = {

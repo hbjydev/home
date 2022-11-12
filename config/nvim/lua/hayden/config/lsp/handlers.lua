@@ -1,6 +1,6 @@
 local M = {}
 
-local icons = require "config.icons"
+local icons = require "hayden.config.icons"
 
 function M.setup()
   local signs = {
