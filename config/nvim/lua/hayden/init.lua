@@ -1,6 +1,19 @@
 local M = {}
 
 function M.setup()
+  -- theme settings
+  vim.g.catppuccin_flavour = "macchiato"
+  require'catppuccin'.setup {
+    flavour = "macchiato",
+    integrations = {
+      cmp = true,
+      gitsigns = true,
+      nvimtree = true,
+      telescope = true,
+    },
+  }
+  vim.cmd.colorscheme "catppuccin"
+
   require'hayden.defaults'.setup()
   require'hayden.keymaps'.setup()
 
@@ -15,17 +28,6 @@ function M.setup()
   require'hayden.config.nvimtree'.setup()
   require'hayden.config.telescope'.setup()
   require'hayden.config.treesitter'.setup()
-
-  require'catppuccin'.setup {
-    flavour = "macchiato",
-    integrations = {
-      cmp = true,
-      gitsigns = true,
-      nvimtree = true,
-      telescope = true,
-    },
-  }
-  vim.cmd.colorscheme "catppuccin"
 end
 
 return M
