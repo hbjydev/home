@@ -5,11 +5,18 @@
   home.homeDirectory = "/home/hayden";
   home.stateVersion = "22.05";
 
+  # Let Home Manager install and manage itself.
+  programs.home-manager.enable = true;
+
   nixpkgs.config = import ./nixpkgs-config.nix;
   xdg.configFile."nixpkgs/config.nix".source = ./nixpkgs-config.nix;
 
+  ##############################################################################
+
   # Packages that should be installed to the user profile.
   home.packages = import ./packages.nix { inherit pkgs; }; 
+
+  home.file.".config/k8s/skin.yaml".source = ./config/k9s/skin.yaml;
 
   home.sessionVariables = {
     EDITOR = "nvim";
@@ -19,9 +26,6 @@
     PATH = "$PATH:$GOPATH/bin";
     NIXPKGS_ALLOW_UNFREE = "1";
   };
-
-  # Let Home Manager install and manage itself.
-  programs.home-manager.enable = true;
 
   # Configure Git
   programs.git = {
