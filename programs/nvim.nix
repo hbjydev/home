@@ -42,7 +42,7 @@
     vimPlugins.trouble-nvim
 
     # treesitter & family
-    vimPlugins.nvim-treesitter
+    vimPlugins.nvim-treesitter.withAllGrammars
     vimPlugins.nvim-treesitter-textobjects
     vimPlugins.nvim-treesitter-context
     vimPlugins.nvim-ts-context-commentstring
@@ -60,6 +60,10 @@
 
   extraConfig = ''
     lua << EOF
+      local status, ts_install = pcall(require, "nvim-treesitter.install")
+      if(status) then
+        ts_install.compilers = { "${pkgs.gcc}/bin/gcc" }
+      end
       require 'hayden'.setup()
     EOF
   '';
