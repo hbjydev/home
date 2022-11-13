@@ -28,9 +28,12 @@
   };
 
   # Configure programs
+  programs.direnv = import ./programs/direnv.nix {};
   programs.git = import ./programs/git.nix { inherit pkgs; };
   programs.gh = import ./programs/gh.nix {};
-  programs.zsh = import ./programs/zsh.nix {};
+  programs.go = import ./programs/go.nix {};
   programs.kitty = import ./programs/kitty.nix {};
   programs.neovim = import ./programs/nvim.nix { inherit pkgs; };
+  programs.nnn = import ./programs/nnn.nix {};
+  programs.zsh = import ./programs/zsh.nix {};
 }

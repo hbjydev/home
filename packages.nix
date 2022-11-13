@@ -4,7 +4,6 @@ with pkgs; [
   awscli2
   azure-cli
   cargo
-  direnv
   docker
   fd
   glab
