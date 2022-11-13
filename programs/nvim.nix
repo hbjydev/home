@@ -1,7 +1,9 @@
 { pkgs, ... }:
-{
+let
+  parsers = pkgs.tree-sitter.withPlugins (_: pkgs.tree-sitter.allGrammars);
+in {
   enable = true;
-  package = pkgs.neovim-nightly;
+  # package = pkgs.neovim-nightly;
 
   viAlias = true;
   vimAlias = true;
@@ -60,10 +62,7 @@
 
   extraConfig = ''
     lua << EOF
-      local status, ts_install = pcall(require, "nvim-treesitter.install")
-      if(status) then
-        ts_install.compilers = { "${pkgs.gcc}/bin/gcc" }
-      end
+      vim.opt.runtimepath:append("${parsers}")
       require 'hayden'.setup()
     EOF
   '';

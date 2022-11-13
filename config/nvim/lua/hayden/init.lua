@@ -1,6 +1,9 @@
 local M = {}
 
 function M.setup()
+  require'hayden.defaults'.setup()
+  require'hayden.keymaps'.setup()
+
   -- theme settings
   vim.g.catppuccin_flavour = "macchiato"
   require'catppuccin'.setup {
@@ -32,9 +35,6 @@ function M.setup()
     },
   }
   vim.cmd.colorscheme "catppuccin"
-
-  require'hayden.defaults'.setup()
-  require'hayden.keymaps'.setup()
 
   require'hayden.config.lsp'.setup()
   require'hayden.config.snip'.setup()

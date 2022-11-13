@@ -8,7 +8,7 @@ function M.setup()
   g.mapleader = " "
   g.maplocalleader = ","
   g.vimsyn_embed = "lPr"
-  
+
   opt.termguicolors = true
   opt.hlsearch = true
   opt.number = true
@@ -38,24 +38,21 @@ function M.setup()
   opt.cmdheight = 1
   opt.scrollback = 100000
   opt.splitkeep = "screen"
-  
+
   opt.whichwrap:append "<>[]hl"
-  
+
   opt.shortmess:append "sI"
-  
+
   opt.path:remove "/usr/include"
   opt.path:append "**"
-  
+
   opt.wildignorecase = true
   opt.wildignore:append "**/node_modules/*"
   opt.wildignore:append "**/.git/*"
-  
+
   opt.foldlevel = 20
   opt.foldmethod = "expr"
   opt.foldexpr = "nvim_treesitter#foldexpr()"
-  
-  g.do_filetype_lua = 1
-  g.did_load_filetypes = 0
 end
 
 return M
