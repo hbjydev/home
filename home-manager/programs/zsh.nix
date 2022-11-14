@@ -43,5 +43,9 @@
     license () {
       curl -L "api.github.com/licenses/$1" | jq -r .body > LICENSE
     }
+
+    if [[ -f "$HOME/.secrets" ]]; then
+      source "$HOME/.secrets"
+    fi
   '';
 }
