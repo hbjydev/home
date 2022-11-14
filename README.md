@@ -24,3 +24,17 @@ nix-shell '<home-manager>' -A install
 git clone https://github.com/hbjydev/home-manager.git ~/.config/nixpkgs
 ```
 
+## Running on MacOS
+
+```shell
+# enable flakes
+echo "experimental-features = nix-command flakes" >> $HOME/.config/nix/nix.conf
+
+# clone
+git clone https://github.com/hbjydev/home.git ~/.config/nixpkgs
+
+# rebuild darwin
+nix build .#darwinConfigurations.macbookair-personal.system
+result/sw/bin/darwin-rebuild switch --flake "."
+```
+
