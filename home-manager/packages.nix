@@ -10,6 +10,7 @@ with pkgs; [
   discord
   fd
   glab
+  go-task
   jetbrains.datagrip # TODO: resolve issue with unfree licenses
   jq
   k9s
