@@ -19,7 +19,7 @@
   outputs = { self, home-manager, nixpkgs, neovim-nightly, darwin, ... }:
     let
       configDarwin = import ./configuration/darwin;
-      # configLinux = import ./configuration/linux;
+      configNixos = import ./configuration/nixos;
       overlays = [ neovim-nightly.overlay ];
     in {
       darwinConfigurations = {
@@ -27,12 +27,9 @@
           configDarwin "hayden" { inherit darwin home-manager overlays; };
       };
 
-      # homeConfigurations.hayden = inputs.home-manager.lib.homeManagerConfiguration {
-      #   inherit pkgs;
-      #   modules = [
-      #     { nixpkgs.overlays = overlays; }
-      #     ./home-manager/home.nix
-      #   ];
-      # };
+      nixosConfigurations = {
+        pc-personal =
+          configNixos "hayden" { inherit nixpkgs home-manager overlays; };
+      };
     };
 }
