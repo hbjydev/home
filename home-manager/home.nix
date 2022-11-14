@@ -33,5 +33,6 @@
   programs.kitty = import ./programs/kitty.nix {};
   programs.neovim = import ./programs/nvim.nix { inherit pkgs; };
   programs.nnn = import ./programs/nnn.nix {};
+  programs.ssh = import ./programs/ssh.nix {};
   programs.zsh = import ./programs/zsh.nix {};
 }

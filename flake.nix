@@ -13,7 +13,7 @@
     };
 
     neovim-nightly.url = "github:nix-community/neovim-nightly-overlay";
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:nixos/nixpkgs";
   };
 
   outputs = { self, home-manager, nixpkgs, neovim-nightly, darwin, ... }:
