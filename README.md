@@ -1,30 +1,27 @@
-# home-manager
+# Home
 
-My [home-manager](https://github.com/nix-community/home-manager)-controlled
-dotfiles repo.
+My Nix dotfiles & configuration repo for managing a standard working environment
+across all my computers. It supports [NixOS](https://nixos.org) and MacOS
+currently, but I want to make it support non-NixOS linux too so I can use it at
+work as well.
 
-## Using
+## Running
+
+### NixOS
 
 ```shell
-# install Nix
-sh <(curl -L https://nixos.org/nix/install) --daemon
-
-# set up package channels
-nix-channel --add https://github.com/nixos/nixpkgs/archive/master.tar.gz nixpkgs
-nix-channel --add https://github.com/nix-community/home-manager/archive/master.tar.gz home-manager
-nix-channel --update
-
-# configure NIX_PATH
-export NIX_PATH=$HOME/.nix-defexpr/channels:/nix/var/nix/profiles/per-user/root/channels${NIX_PATH:+:$NIX_PATH}
-
-# install home-manager
-nix-shell '<home-manager>' -A install
+# clear old /etc/nixos
+sudo rm -rf /etc/nixos
 
 # clone the repo
-git clone https://github.com/hbjydev/home-manager.git ~/.config/nixpkgs
+sudo nix-env -i git
+sudo git clone https://github.com/hbjydev/home.git /etc/nixos
+
+# rebuild nixos
+sudo nixos-rebuild switch --flake "/etc/nixos#pc-personal"
 ```
 
-## Running on MacOS
+### MacOS
 
 ```shell
 # enable flakes
@@ -37,4 +34,3 @@ git clone https://github.com/hbjydev/home.git ~/.config/nixpkgs
 nix build .#darwinConfigurations.macbookair-personal.system
 result/sw/bin/darwin-rebuild switch --flake "."
 ```
-
