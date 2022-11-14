@@ -27,6 +27,7 @@
 
   # Configure programs
   programs.direnv = import ./programs/direnv.nix {};
+  programs.chromium = import ./programs/chromium.nix { inherit pkgs; };
   programs.git = import ./programs/git.nix { inherit pkgs; };
   programs.gh = import ./programs/gh.nix {};
   programs.go = import ./programs/go.nix {};

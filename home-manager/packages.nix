@@ -15,7 +15,6 @@ with pkgs; [
   k9s
   kubectl
   lazydocker
-  microsoft-edge
   niv
   nodejs-18_x
   obsidian
