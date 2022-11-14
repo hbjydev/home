@@ -163,8 +163,8 @@ function M.setup()
   -- null-ls
   -- require("hayden.config.lsp.null-ls").setup(opts)
 
-  -- Installer
-  require("hayden.config.lsp.installer").setup(servers, opts)
+  -- servers
+  require("hayden.config.lsp.servers").setup(servers, opts)
 end
 
 return M
