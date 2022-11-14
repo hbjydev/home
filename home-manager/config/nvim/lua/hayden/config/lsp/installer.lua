@@ -1,36 +1,50 @@
 local M = {}
 
+function on_attach(client, bufnr)
+  require'hayden.config.lsp.keymaps'.setup(client, bufnr)
+end
+
 function M.setup(servers, server_options)
   local lspconfig = require "lspconfig"
   local icons = require "hayden.config.icons"
 
-  lspconfig.ansiblels.setup {}
-  lspconfig.bashls.setup {}
-  lspconfig.bufls.setup {}
-  lspconfig.cssls.setup {}
-  lspconfig.cssmodules_ls.setup {}
-  lspconfig.denols.setup {}
-  lspconfig.dockerls.setup {}
-  lspconfig.eslint.setup {}
-  lspconfig.golangci_lint_ls.setup {}
-  lspconfig.gopls.setup {}
-  lspconfig.graphql.setup {}
-  lspconfig.html.setup {}
-  lspconfig.intelephense.setup {}
-  lspconfig.jsonls.setup {}
-  lspconfig.jsonnet_ls.setup {}
-  lspconfig.phan.setup {}
-  lspconfig.prismals.setup {}
-  lspconfig.pyright.setup {}
-  lspconfig.rnix.setup {}
-  lspconfig.sqls.setup {}
-  lspconfig.tailwindcss.setup {}
-  lspconfig.terraformls.setup {}
-  lspconfig.tsserver.setup {}
-  lspconfig.volar.setup {}
+  local servers = {
+    "ansiblels",
+    "bashls",
+    "bufls",
+    "cssls",
+    "cssmodules_ls",
+    "denols",
+    "dockerls",
+    "eslint",
+    "golangci_lint_ls",
+    "gopls",
+    "graphql",
+    "html",
+    "intelephense",
+    "jsonls",
+    "jsonnet_ls",
+    "phan",
+    "prismals",
+    "pyright",
+    "rnix",
+    "sqls",
+    "sumneko_lua",
+    "tailwindcss",
+    "terraformls",
+    "tsserver",
+    "volar",
+  }
 
-  require("neodev").setup {}
-  lspconfig.sumneko_lua.setup {}
+  for _, name in pairs(servers) do
+    if name == "sumneko_lua" then
+      require("neodev").setup {}
+    end
+
+    lspconfig[name].setup {
+      on_attach = on_attach
+    }
+  end
 end
 
 return M
