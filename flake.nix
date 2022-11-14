@@ -19,11 +19,8 @@
   outputs = { self, home-manager, nixpkgs, neovim-nightly, darwin, ... }:
     let
       configDarwin = import ./configuration/darwin;
-      configLinux = import ./configuration/linux;
-      overlays = [
-        neovim-nightly.overlay
-        (import ./overlays.nix)
-      ];
+      # configLinux = import ./configuration/linux;
+      overlays = [ neovim-nightly.overlay ];
     in {
       darwinConfigurations = {
         macbookair-personal =

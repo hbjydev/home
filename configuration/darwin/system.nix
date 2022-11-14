@@ -18,7 +18,10 @@
   };
 
   nixpkgs = {
-    config.allowUnfree = true;
+    config = {
+      allowBroken = true;
+      allowUnfree = true;
+    };
 
     overlays = [ (import ../../home-manager/overlays.nix) ];
   };
