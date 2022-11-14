@@ -66,8 +66,6 @@
     color14 = "#8BD5CA";
     color7 = "#B8C0E0";
     color15 = "#A5ADCB";
-    background_opacity = "0.9";
-    font_size = "12.0";
   };
   theme = "Catppuccin-Macchiato";
 }

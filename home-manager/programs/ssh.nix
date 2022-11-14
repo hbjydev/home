@@ -2,8 +2,8 @@
 
 {
   enable = true;
-
-  matchBlocks."*".extraConfig = ''
-    IdentityAgent ~/.1password/agent.sock
+  extraConfig = ''
+    Host *
+      IdentityAgent ~/.1password/agent.sock
   '';
 }
