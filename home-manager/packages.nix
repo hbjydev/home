@@ -1,27 +1,35 @@
 { pkgs, ... }:
 
 with pkgs; [
+  _1password
+  _1password-gui-beta
   awscli2
   azure-cli
   cargo
   docker
+  discord
   fd
   glab
-  #jetbrains.datagrip # TODO: resolve issue with unfree licenses
+  jetbrains.datagrip # TODO: resolve issue with unfree licenses
   jq
   k9s
   kubectl
   lazydocker
+  microsoft-edge
   niv
   nodejs-18_x
-  #postman
-  #pulumi-bin
+  obsidian
+  operator-sdk
+  postman
+  pulumi-bin
   python3Packages.pynvim
   python3Full
   ripgrep
   rustc
   rustfmt
   terraform
+  todoist
+  todoist-electron
   virtualenv
   yarn
 

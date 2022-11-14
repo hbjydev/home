@@ -53,6 +53,9 @@
 
   nixpkgs.config.allowUnfree = true;
   nixpkgs.config.pulseaudio = true;
+  nixpkgs.config.permittedInsecurePackages = [
+    "electron-15.5.2"
+  ];
   nixpkgs.overlays = [ (import ../../home-manager/overlays.nix) ];
 
   programs.dconf.enable = true;
