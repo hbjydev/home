@@ -107,7 +107,7 @@
     extraGroups = [ "audio" "docker" "networkmanager" "wheel" ];
     home = "/home/hayden";
     isNormalUser = true;
-    openssh.authorizedKeys.keys = [];
+    openssh.authorizedKeys.keys = [ ];
     shell = pkgs.zsh;
   };
 

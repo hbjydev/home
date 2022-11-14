@@ -6,6 +6,8 @@
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
+  home.file.".background".source = ./config/background.jpeg;
+
   nixpkgs.config = import ./nixpkgs-config.nix;
   xdg.configFile."nixpkgs/config.nix".source = ./nixpkgs-config.nix;
 
@@ -24,6 +26,21 @@
     PATH = "$PATH:$GOPATH/bin";
     NIXPKGS_ALLOW_UNFREE = "1";
   };
+
+  dconf =
+    let
+      bgPath = "/home/hayden/.background";
+    in
+    {
+      settings = {
+        "org/gnome/desktop/background" = {
+          "picture-uri" = bgPath;
+        };
+        "org/gnome/desktop/screensaver" = {
+          "picture-uri" = bgPath;
+        };
+      };
+    };
 
   # Configure programs
   programs.direnv = import ./programs/direnv.nix {};

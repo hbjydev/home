@@ -1,5 +1,5 @@
 { ... }:
 {
   enable = true;
-  goPath = "$HOME/go";
+  goPath = ".go";
 }
