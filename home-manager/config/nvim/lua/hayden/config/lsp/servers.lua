@@ -34,6 +34,7 @@ function M.setup(servers, server_options)
     "terraformls",
     "tsserver",
     "volar",
+    "yamlls",
   }
 
   for _, name in pairs(servers) do
