@@ -24,6 +24,7 @@
 
   environment.systemPackages = with pkgs; [
     curl
+    obs-studio
     linuxPackages.v4l2loopback
   ];
 
