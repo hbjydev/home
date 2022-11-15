@@ -1,0 +1,13 @@
+diff --git a/pandoc.cabal b/pandoc.cabal
+index 3d6923f..fa68f9a 100644
+--- a/pandoc.cabal
++++ b/pandoc.cabal
+@@ -492,7 +492,7 @@ library
+                  exceptions            >= 0.8      && < 0.11,
+                  file-embed            >= 0.0      && < 0.1,
+                  filepath              >= 1.1      && < 1.5,
+-                 gridtables            >= 0.0.3    && < 0.1,
++                 gridtables            >= 0.1      && < 0.2,
+                  haddock-library       >= 1.10     && < 1.12,
+                  hslua-module-doclayout>= 1.0.4    && < 1.1,
+                  hslua-module-path     >= 1.0.3    && < 1.1,

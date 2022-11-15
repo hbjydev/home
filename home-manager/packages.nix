@@ -30,9 +30,16 @@ with pkgs; [
   terraform
   todoist
   todoist-electron
+  spotify
   virtualenv
   yarn
+  zotero
 
+  # pandoc
+  pandoc
+  texlive.combined.scheme-full
+
+  # language servers
   gopls
   nil
   nodePackages."@prisma/language-server"
