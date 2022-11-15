@@ -10,6 +10,7 @@ with pkgs; [
   discord
   fd
   glab
+  golangci-lint
   go-task
   jetbrains.datagrip # TODO: resolve issue with unfree licenses
   jq
@@ -53,5 +54,6 @@ with pkgs; [
   nodePackages."yaml-language-server"
   rust-analyzer
   sumneko-lua-language-server
+  golangci-lint-langserver
   terraform-ls
 ]
