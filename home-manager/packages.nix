@@ -38,6 +38,8 @@ with pkgs; [
 
   # pandoc
   pandoc
+  pandoc-plantuml-filter
+  plantuml
   texlive.combined.scheme-full
 
   # language servers

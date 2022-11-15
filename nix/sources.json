@@ -1,0 +1,26 @@
+{
+    "catppuccin-tmux": {
+        "branch": "main",
+        "description": "💽 Soothing pastel theme for Tmux!",
+        "homepage": "",
+        "owner": "catppuccin",
+        "repo": "tmux",
+        "rev": "d9e5c6d1e3b2c6f6f344f7663691c4c8e7ebeb4c",
+        "sha256": "0658dbzxsj7jzmmf0kqb2fq29mf37fca25vn789jskg2d26dhjck",
+        "type": "tarball",
+        "url": "https://github.com/catppuccin/tmux/archive/d9e5c6d1e3b2c6f6f344f7663691c4c8e7ebeb4c.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
+    "nixpkgs": {
+        "branch": "release-21.05",
+        "description": "Nix Packages collection",
+        "homepage": "",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "5f244caea76105b63d826911b2a1563d33ff1cdc",
+        "sha256": "1xlgynfw9svy7nvh9nkxsxdzncv9hg99gbvbwv3gmrhmzc3sar75",
+        "type": "tarball",
+        "url": "https://github.com/NixOS/nixpkgs/archive/5f244caea76105b63d826911b2a1563d33ff1cdc.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    }
+}

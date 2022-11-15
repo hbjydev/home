@@ -52,5 +52,6 @@
   programs.neovim = import ./programs/nvim.nix { inherit pkgs; };
   programs.nnn = import ./programs/nnn.nix {};
   programs.ssh = import ./programs/ssh.nix {};
+  programs.tmux = import ./programs/tmux.nix { inherit pkgs; };
   programs.zsh = import ./programs/zsh.nix {};
 }

@@ -1,4 +1,8 @@
-self: super: {
+self: super:
+let
+  sources = import ../nix/sources.nix;
+in
+{
   haskellPackages = super.haskellPackages.override {
     overrides = hfinal: hprev:
       let
@@ -22,6 +26,14 @@ self: super: {
         lua = lua_2_2_1;
         pandoc = dontCheck (appendPatch pandoc_2_19_2 ./patches/pandoc.patch);
       };
+  };
+
+  customTmux = with self; {
+    catppuccin = super.tmuxPlugins.mkTmuxPlugin {
+      pluginName = "catppuccin";
+      src = sources."catppuccin-tmux";
+      version = "unstable-2022-11-15";
+    };
   };
 
   customVim = with self; {
