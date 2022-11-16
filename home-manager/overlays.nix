@@ -28,6 +28,8 @@ in
       };
   };
 
+  catppuccin-gtk-theme = self.callPackage (import ../nix/catppuccin/gtk.nix) {};
+
   customTmux = with self; {
     catppuccin = super.tmuxPlugins.mkTmuxPlugin {
       pluginName = "catppuccin";

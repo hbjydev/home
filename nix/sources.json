@@ -1,4 +1,40 @@
 {
+    "catppuccin-gtk": {
+        "branch": "main",
+        "description": "🪟 Soothing pastel theme for GTK3",
+        "homepage": "",
+        "owner": "catppuccin",
+        "repo": "gtk",
+        "rev": "445ccb76b491350e8e604f885298ebe05b67a6ca",
+        "sha256": "1i3aazxz0vsr6yp3k1333q39sk76bqbsp5xb194bxzwj05lnwch9",
+        "type": "tarball",
+        "url": "https://github.com/catppuccin/gtk/archive/445ccb76b491350e8e604f885298ebe05b67a6ca.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
+    "catppuccin-k9s": {
+        "branch": "main",
+        "description": "🐶 Soothing pastel theme for k9s",
+        "homepage": null,
+        "owner": "catppuccin",
+        "repo": "k9s",
+        "rev": "322598e19a4270298b08dc2765f74795e23a1615",
+        "sha256": "04hvfs6gwgv11pjip4kadffd8d2qzznwq4wghm2w0cx000xl5d0s",
+        "type": "tarball",
+        "url": "https://github.com/catppuccin/k9s/archive/322598e19a4270298b08dc2765f74795e23a1615.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
+    "catppuccin-obs": {
+        "branch": "main",
+        "description": "⏺️ Soothing pastel theme for OBS Studio",
+        "homepage": "",
+        "owner": "catppuccin",
+        "repo": "obs",
+        "rev": "e2e2f4144400846d04615707dafdb68a3a003267",
+        "sha256": "12cz7qhh1phdcj9x063adkp7gv02lxm72m22ly11ynfpg0hk23ws",
+        "type": "tarball",
+        "url": "https://github.com/catppuccin/obs/archive/e2e2f4144400846d04615707dafdb68a3a003267.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
     "catppuccin-tmux": {
         "branch": "main",
         "description": "💽 Soothing pastel theme for Tmux!",

@@ -19,7 +19,10 @@
       };
       enable = true;
     };
-    fonts = with pkgs; [ (nerdfonts.override { fonts = [ "FiraCode" ]; }) ];
+    fonts = with pkgs; [
+      (nerdfonts.override { fonts = [ "FiraCode" ]; })
+      open-sans
+    ];
   };
 
   environment.systemPackages = with pkgs; [
@@ -54,7 +57,10 @@
       options = "--delete-older-than 7d";
     };
     package = pkgs.nixUnstable;
-    settings = { auto-optimise-store = true; };
+    settings = {
+      auto-optimise-store = true;
+      trusted-users = [ "root" "hayden" ];
+    };
   };
 
   nixpkgs.config.allowUnfree = true;
