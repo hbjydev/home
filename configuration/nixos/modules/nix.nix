@@ -29,4 +29,9 @@
     };
     overlays = [ (import ../../../home-manager/overlays.nix) ];
   };
+
+  documentation = {
+    doc.enable = false;
+    nixos.enable = false;
+  };
 }
