@@ -5,6 +5,7 @@ with pkgs; [
   _1password-gui-beta
   awscli2
   azure-cli
+  cachix
   cargo
   docker
   discord
@@ -12,7 +13,7 @@ with pkgs; [
   glab
   golangci-lint
   go-task
-  jetbrains.datagrip # TODO: resolve issue with unfree licenses
+  jetbrains.datagrip
   jq
   k9s
   kubectl
@@ -55,6 +56,7 @@ with pkgs; [
   nodePackages."vscode-langservers-extracted"
   nodePackages."yaml-language-server"
   rust-analyzer
+  rnix-lsp
   sumneko-lua-language-server
   golangci-lint-langserver
   terraform-ls
