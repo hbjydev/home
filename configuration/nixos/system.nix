@@ -31,7 +31,6 @@
     linuxPackages.v4l2loopback
   ];
 
-
   environment.pathsToLink = [ "/libexec" "/share/zsh" ];
 
   hardware.opengl.enable = true;
