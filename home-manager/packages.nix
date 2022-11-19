@@ -46,6 +46,7 @@ with pkgs; [
   # language servers
   gopls
   nil
+  nodePackages."@tailwindcss/language-server"
   nodePackages."@prisma/language-server"
   nodePackages."bash-language-server"
   nodePackages."dockerfile-language-server-nodejs"
