@@ -56,6 +56,7 @@ with pkgs; [
   nodePackages."bash-language-server"
   nodePackages."dockerfile-language-server-nodejs"
   nodePackages."graphql-language-service-cli"
+  nodePackages."intelephense"
   nodePackages."pyright"
   nodePackages."typescript"
   nodePackages."typescript-language-server"

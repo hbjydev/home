@@ -20,6 +20,7 @@ in {
     vimPlugins.lualine-nvim
     vimPlugins.nvim-tree-lua
     vimPlugins.nvim-autopairs
+    vimPlugins.editorconfig-nvim
 
     # luasnip & family
     vimPlugins.luasnip
