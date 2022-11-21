@@ -31,5 +31,23 @@
         pc-personal =
           configNixos "hayden" { inherit nixpkgs home-manager overlays; };
       };
+
+      homeConfigurations = {
+        hayden = home-manager.lib.homeManagerConfiguration {
+          pkgs = import nixpkgs {
+            system = "x86_64-linux";
+            config = {
+              allowUnfree = true;
+              permittedInsecurePackages = [
+                "electron-15.5.2"
+              ];
+            };
+            overlays = overlays ++ [ (import ./home-manager/overlays.nix) ];
+          };
+          modules = [
+            ./home-manager/linux.nix
+          ];
+        };
+      };
     };
 }

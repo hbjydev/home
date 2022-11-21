@@ -45,6 +45,8 @@ in
       };
     };
 
+  fonts.fontconfig.enable = true;
+
   # Configure programs
   programs.direnv = import ./programs/direnv.nix {};
   programs.chromium = import ./programs/chromium.nix { inherit pkgs; };

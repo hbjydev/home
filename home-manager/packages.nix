@@ -37,6 +37,11 @@ with pkgs; [
   yarn
   zotero
 
+  # fonts
+  (nerdfonts.override { fonts = [ "FiraCode" ]; })
+  open-sans
+  inter
+
   # pandoc
   pandoc
   pandoc-plantuml-filter
