@@ -24,8 +24,9 @@ with pkgs; [
   operator-sdk
   postman
   pulumi-bin
-  python3Packages.pynvim
   python3Full
+  python3Packages.setuptools
+  python3Packages.pynvim
   ripgrep
   rustc
   rustfmt
