@@ -23,7 +23,7 @@ with pkgs; [
   obsidian
   operator-sdk
   postman
-  pulumi-bin
+  pulumi
   python3Packages.pynvim
   python3Full
   ripgrep
