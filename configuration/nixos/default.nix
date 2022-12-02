@@ -14,6 +14,7 @@ nixpkgs.lib.nixosSystem {
     ./modules/ssh.nix
     ./modules/user.nix
     ./modules/sudo.nix
+    ./modules/k3s.nix
     ./modules/podman.nix
     ./modules/docker.nix
     ./modules/gnome.nix

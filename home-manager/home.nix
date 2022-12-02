@@ -19,7 +19,7 @@ in
   # Packages that should be installed to the user profile.
   home.packages = import ./packages.nix { inherit pkgs; }; 
 
-  home.file.".config/k9s/skin.yaml".source = (sources.catppuccin-k9s + "/dist/macchiato.yml");
+  home.file.".config/k9s/skin.yml".source = (sources.catppuccin-k9s + "/dist/macchiato.yml");
 
   home.sessionVariables = {
     EDITOR = "nvim";
