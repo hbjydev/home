@@ -8,6 +8,7 @@ nixpkgs.lib.nixosSystem {
     ./hardware-amd.nix
     ./system.nix
 
+    ./modules/1password.nix
     ./modules/boot.nix
     ./modules/networking.nix
     ./modules/nix.nix

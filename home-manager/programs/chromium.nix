@@ -14,5 +14,7 @@
     { id = "nhdogjmejiglipccpnnnanhbledajbpd"; } # Vue Devtools
     { id = "ekhagklcjbdpajgpjgmbionohlpdbjgc"; } # Zotero Connector
     { id = "ldjkgaaoikpmhmkelcgkgacicjfbofhh"; } # Instapaper
+    { id = "cmpdlhmnmjhihmcfnigoememnffkimlk"; } # Catppuccin Macchiato
+    { id = "clngdbkpkpeebahjckkjfobafhncgmne"; } # Stylus
   ];
 }

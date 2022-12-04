@@ -1,8 +1,6 @@
 { pkgs, ... }:
 
 with pkgs; [
-  _1password
-  _1password-gui-beta
   awscli2
   azure-cli
   cachix
