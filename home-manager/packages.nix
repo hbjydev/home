@@ -7,6 +7,7 @@ with pkgs; [
   azure-cli
   cachix
   cargo
+  crc
   docker
   discord
   fd

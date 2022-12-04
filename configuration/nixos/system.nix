@@ -22,6 +22,8 @@
 
   system.stateVersion = "22.05";
 
+  programs.nix-ld.enable = true;
+
   time.timeZone = "Europe/London";
   i18n.defaultLocale = "en_GB.utf8";
 }
