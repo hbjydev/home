@@ -11,9 +11,6 @@ function M.setup()
       relativenumber = true,
       side = "right",
     },
-    filters = {
-      custom = { ".git" },
-    },
     sync_root_with_cwd = true,
     update_focused_file = {
       enable = true,
