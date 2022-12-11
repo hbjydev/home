@@ -8,6 +8,8 @@
         "docker"
         "networkmanager"
         "wheel"
+        "qemu-libvirtd"
+        "libvirtd"
       ];
 
       home = "/home/hayden";

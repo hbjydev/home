@@ -21,6 +21,7 @@ nixpkgs.lib.nixosSystem {
     ./modules/gnome.nix
     ./modules/fonts.nix
     ./modules/sound.nix
+    ./modules/libvirt.nix
     
     home-manager.nixosModules.home-manager
     {

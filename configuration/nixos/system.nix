@@ -6,6 +6,7 @@
     obs-studio
     linuxPackages.v4l2loopback
     gnomeExtensions.tactile
+    minecraft
   ];
 
   environment.pathsToLink = [ "/libexec" "/share/zsh" ];
@@ -17,12 +18,11 @@
   '';
 
   services.xserver.layout = "gb";
+  hardware.opentabletdriver.enable = true;
 
   security.rtkit.enable = true;
 
   system.stateVersion = "22.05";
-
-  programs.nix-ld.enable = true;
 
   time.timeZone = "Europe/London";
   i18n.defaultLocale = "en_GB.utf8";

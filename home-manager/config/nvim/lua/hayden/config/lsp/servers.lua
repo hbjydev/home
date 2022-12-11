@@ -13,8 +13,6 @@ function M.setup(servers, server_options)
     "bashls",
     "bufls",
     "cssls",
-    "cssmodules_ls",
-    "denols",
     "dockerls",
     "eslint",
     "golangci_lint_ls",
