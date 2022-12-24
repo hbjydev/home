@@ -12,6 +12,7 @@ function M.setup(servers, server_options)
     "ansiblels",
     "bashls",
     "bufls",
+    "clangd",
     "cssls",
     "dockerls",
     "eslint",

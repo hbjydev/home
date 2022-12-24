@@ -5,6 +5,9 @@ with pkgs; [
   azure-cli
   cachix
   cargo
+  clang
+  clang-tools
+  cmake
   crc
   docker
   discord
@@ -18,23 +21,27 @@ with pkgs; [
   kubectl
   lazydocker
   niv
+  neovim
   nodejs-18_x
   obsidian
+  openshift
   operator-sdk
   postman
   pulumi
-  python3Packages.pynvim
-  python3Full
-  python3Packages.setuptools
-  python3Packages.pynvim
+  python39Full
+  python39Packages.pynvim
+  python39Packages.setuptools
   ripgrep
   rustc
   rustfmt
   terraform
   todoist
   todoist-electron
+  slides
   spotify
   virtualenv
+  vistafonts
+  unzip
   yarn
   zotero
 

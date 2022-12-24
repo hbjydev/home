@@ -2,6 +2,7 @@
 
 {
   environment.systemPackages = with pkgs; [
+    crc
     curl
     obs-studio
     linuxPackages.v4l2loopback
@@ -26,4 +27,6 @@
 
   time.timeZone = "Europe/London";
   i18n.defaultLocale = "en_GB.utf8";
+
+  programs.steam.enable = true;
 }

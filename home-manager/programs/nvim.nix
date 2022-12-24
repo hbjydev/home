@@ -2,7 +2,7 @@
 let
   parsers = pkgs.tree-sitter.withPlugins (_: pkgs.tree-sitter.allGrammars);
 in {
-  enable = true;
+  enable = false;
   # package = pkgs.neovim-nightly;
 
   viAlias = true;
