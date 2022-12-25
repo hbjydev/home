@@ -10,12 +10,10 @@ with pkgs; [
   cmake
   crc
   docker
-  discord
   fd
   glab
   golangci-lint
   go-task
-  jetbrains.datagrip
   jq
   k9s
   kubectl
@@ -26,7 +24,6 @@ with pkgs; [
   obsidian
   openshift
   operator-sdk
-  postman
   pulumi
   python39Full
   python39Packages.pynvim
@@ -35,20 +32,16 @@ with pkgs; [
   rustc
   rustfmt
   terraform
-  todoist
-  todoist-electron
   slides
-  spotify
   virtualenv
-  vistafonts
   unzip
+  zip
   yarn
-  zotero
 
   # fonts
-  (nerdfonts.override { fonts = [ "FiraCode" ]; })
-  open-sans
-  inter
+  #(nerdfonts.override { fonts = [ "FiraCode" ]; })
+  #open-sans
+  #inter
 
   # pandoc
   pandoc

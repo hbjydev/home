@@ -30,23 +30,6 @@ in
     NIXPKGS_ALLOW_UNFREE = "1";
   };
 
-  dconf =
-    let
-      bgPath = "/home/hayden/.background";
-    in
-    {
-      settings = {
-        "org/gnome/desktop/background" = {
-          "picture-uri" = bgPath;
-        };
-        "org/gnome/desktop/screensaver" = {
-          "picture-uri" = bgPath;
-        };
-      };
-    };
-
-  fonts.fontconfig.enable = true;
-
   # Configure programs
   programs.direnv = import ./programs/direnv.nix {};
   programs.chromium = import ./programs/chromium.nix { inherit pkgs; };
