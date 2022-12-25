@@ -9,4 +9,6 @@ in
   home.file.".config/obs-studio/themes".source = (sources.catppuccin-obs + "/themes");
 
   gtk = import ./programs/gtk.nix { inherit pkgs; flk = self; };
+
+  programs.chromium.enable = true;
 }

@@ -1,6 +1,5 @@
 { pkgs, ... }:
 {
-  enable = true;
   package = pkgs.microsoft-edge;
 
   extensions = [
