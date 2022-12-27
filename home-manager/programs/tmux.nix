@@ -7,6 +7,8 @@
   shortcut = "a";
 
   extraConfig = ''
+    run-shell /home/hayden/Repos/github.com/hbjydev/oxocarbon-tmux/oxocarbon.tmux
+
     # split horizontally
     unbind h
     unbind %
@@ -18,5 +20,6 @@
     bind v split-window -v -c "#{pane_current_path}"
   '';
 
-  plugins = with pkgs; [ customTmux.catppuccin ];
+  plugins = [];
+  #plugins = with pkgs; [ customTmux.catppuccin ];
 }
